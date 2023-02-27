@@ -1,32 +1,23 @@
-import React, { useState, useContext } from 'react'
+import React, {useContext } from 'react'
 import { MdClose } from 'react-icons/md'
-import pord from '../../assets/godOfWar.webp'
 import './cartItem.scss'
 import { Context } from '../../u/context'
 
 const CartItem = () => {
     const {
         cartItem, 
+        setCartItem,
         handleAddToCart,
-        handleRemoveCart,
         handleCartProductQuantity
     } = useContext(Context);
 
 
-    const [count, setCount] = useState(1)
-    const handleIncriment=()=>{
-        setCount(count+1)
+    const handleRemoveCart = (product) => {
+        console.log('call');
+        let items = [...cartItem];
+        items = items?.filter(p => p.id !== product?.id)
+        setCartItem(items);
     }
-
-    const handleDecriment=()=>{
-        if(count>1){
-            setCount(count-1)
-        }
-    }
-
-    cartItem.map(item=>{
-        console.log(item.attributes.quantity);
-    })
 
     return (
         <div className='cart-products'>
@@ -38,7 +29,7 @@ const CartItem = () => {
                 </div>
                 <div className="details">
                     <span className="name">{item.attributes.title}</span>
-                    <MdClose className='close-btn' onClick={()=> handleRemoveCart(item)}/>
+                    <MdClose className='close-btn' onClick={()=>handleRemoveCart(item)}/>
                     <div className="quantity-btn">
                         <span onClick={()=>handleCartProductQuantity('dec', item)}>-</span>
                         <span>{item.attributes.quantity}</span>

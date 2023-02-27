@@ -3,7 +3,6 @@ import axios from 'axios';
 import './home.scss';
 import Category from '../category/categories';
 import Products from './Products';
-import { fetchData } from '../../u/api';
 import { Context } from '../../u/context';
 
 const Home = () => {

@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Context } from '../../u/context'
 
 
+
 const SingleProduct = () => {
   const [singleData, setSingleData] = useState()
   const { id } = useParams();
