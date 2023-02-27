@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 first go with
 Download the zip file
-then run the following commond
+then run the following commond.
 ### `npm i` or `npm install`
 ### `npm start`
 
