@@ -14,6 +14,10 @@ first go with
 Download the zip file
 then run the following commond
 ### `npm i` or `npm install`
+### `npm start`
 
 then go in yo the api folder
 using ### `cd api`
+### `npm i`
+### `yarn start`
+
