@@ -1,0 +1,36 @@
+body{
+     margin: 0;
+}
+.navbar{
+    background-color: #100e4f;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+    padding:0;
+    height: 90px;
+}
+.cam{
+    font-size: 40px; 
+    color: white;
+    padding: 0;
+    Display: Inline-Block;
+    margin-right: 100px;
+    text-decoration: none;
+
+}
+
+.logo > h1{
+    margin-left: 30px;
+    font-size: 30px;
+    top: 0;
+    color: white;
+    padding: 0;
+ 
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
