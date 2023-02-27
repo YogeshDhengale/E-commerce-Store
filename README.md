@@ -8,5 +8,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+
 first go with
+Download the zip file
+then run the following commond
 ### `npm i` or `npm install`
+
+then go in yo the api folder
+using ### `cd api`
