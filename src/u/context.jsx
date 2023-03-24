@@ -12,10 +12,8 @@ const AppContext = ({ children }) => {
     const loacation = useLocation()
 
     useEffect(() => {
-        let subTotal = 0;
-        cartItem.map(item => subTotal += item.attributes.price * item.attributes.quantity)
-        SetSubTotal(subTotal)
-     }, [cartItem])
+     
+    }, [cartItem])
     const handleAddToCart = (product, quantity) => {
         console.log('Hello Cart')
         let items = [...cartItem]
@@ -28,16 +26,16 @@ const AppContext = ({ children }) => {
         }
         setCartItem(items)
     }
-    
+
     const handleCartProductQuantity = (type, product) => {
-         let items = [...cartItem]
+        let items = [...cartItem]
         let index = items.findIndex(p => p.id === product.id)
 
-        if(type === "inc"){
-            items[index].attributes.quantity+=1
-        } else if( type === 'dec'){
-            if(items[index].attributes.quantity===1) return;
-            items[index].attributes.quantity-=1
+        if (type === "inc") {
+            items[index].attributes.quantity += 1
+        } else if (type === 'dec') {
+            if (items[index].attributes.quantity === 1) return;
+            items[index].attributes.quantity -= 1
         }
         setCartItem(items)
     }
